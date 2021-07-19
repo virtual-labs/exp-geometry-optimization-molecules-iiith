@@ -1,1 +1,150 @@
 /* You CSS goes in here */
+.ChemDoodleWebComponent {
+  border: none !important;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: thin solid black; */
+  background: #f5f5f5;
+  width: 100%;
+}
+
+.detail-title {
+  background: #48b8d0;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* 
+  @media only screen and (max-width: 768px) {
+    .detail-row {
+      flex-direction: column;
+    }
+    .detail-block {
+      transform: scale(0.8);
+    }
+  } */
+
+.detail-block {
+  /* border: thin solid black;   */
+  background: #ffffff;
+  margin: 20px;
+  box-sizing: border-box;
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.detail-figure {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: black;
+}
+.detail-figure > * {
+  /* height: 100%; */
+  flex: 1;
+}
+
+.detail-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.detail-data > * {
+  margin: 0.2em;
+}
+
+.detail-blocktitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.detail-data .v-slider {
+  width: 80%;
+}
+
+.detail-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail-buttons .v-button {
+  width: 6rem;
+}
+
+.v-vertical {
+  flex-direction: column;
+}
+
+.v-margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.v-chip {
+  padding: 1em;
+  min-width: 15rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+}
+
+.v-chip:hover {
+  background: #48b8d0;
+  color: #fff;
+}
+
+.v-chip.active {
+  background: #48b8d0;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .v-chip {
+    width: 100%;
+  }
+  /* .detail-row {
+      flex-direction: column;
+    }
+    .detail-block {
+      transform: scale(0.8);
+    } */
+}
+
+.expand-container {
+  width: 100%;
+}
+
+.px-2 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.m {
+  margin: 20px;
+}
+
+.v-flex-column {
+  flex-direction: column;
+}
