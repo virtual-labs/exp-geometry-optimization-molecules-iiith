@@ -10,11 +10,44 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.5-b/css/style.css"
+      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.7-b/css/style.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <div class="v-details-container v-margin-bottom">
+      <div class="v-detail-title">
+        <div>Instructions</div>
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Select an element from the list.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Dihedral angle vs Energy plot of the selected element will get
+        displayed.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Select any point on this graph.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Now select a large step size from the slider.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Click on Get Next Point to get next lower point using steepest descent
+        method.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        For the current selected angle, the orientation of the molecule will
+        also get displayed.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Use mouse to interact with molecule, by rotating, and zooming around it.
+      </div>
+      <div class="v-detail-row left-on-mobile">
+        Perform the above memtioned steps repeatedly, by gradually reducing the
+        step size, until minima is reached.
+      </div>
+    </div>
     <div class="columns">
       <div class="column center-content v-flex-column">
         <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
@@ -23,43 +56,43 @@
           style="width: 100%; max-width: 700px; height: 100%"
         ></canvas>
       </div>
-      <div class="column center-content v-vertical">
-        <div class="details-container">
-          <div class="detail-title">
-            <div class="">Choose an element</div>
+      <div class="column v-vertical">
+        <div class="v-details-container">
+          <div class="v-detail-title">
+            <div>Choose an element</div>
           </div>
-          <div class="detail-row element-set">
-            <div class="detail-block v-chip active">Butadiene</div>
-            <div class="detail-block v-chip">Butane</div>
-            <div class="detail-block v-chip">Ethane</div>
+          <div class="v-detail-row element-set">
+            <div class="v-detail-block v-chip active">Butadiene</div>
+            <div class="v-detail-block v-chip">Butane</div>
+            <div class="v-detail-block v-chip">Ethane</div>
           </div>
         </div>
-        <div class="details-container">
-          <div class="detail-title">
-            <div class="">Select any point from the graph</div>
+        <div class="v-details-container">
+          <div class="v-detail-title">
+            <div>Select any point from the graph</div>
           </div>
-          <div class="detail-row">
+          <div class="v-detail-row">
             <div class="detail-data">
               <div>x = <span id="x-val">N/A</span></div>
             </div>
           </div>
-          <div class="detail-row">
+          <div class="v-detail-row">
             <div class="detail-data">
               <div>f(x) = <span id="y-val">N/A</span></div>
             </div>
           </div>
         </div>
 
-        <div class="details-container">
-          <div class="detail-title">Configure Algorithm</div>
-          <div class="detail-row algorithm-set">
-            <div class="detail-block v-chip active">
+        <div class="v-details-container">
+          <div class="v-detail-title">Configure Algorithm</div>
+          <div class="v-detail-row algorithm-set">
+            <div class="v-detail-block v-chip active">
               Steepest Descent Method
             </div>
           </div>
-          <div class="detail-row expand-container">
+          <div class="v-detail-row expand-container">
             <div class="detail-data px-2">
-              <div>Delta x is <span id="delta-x">0</span></div>
+              <div>Step size is <span id="delta-x">0</span></div>
               <input
                 type="range"
                 class="v-slider-full"
@@ -71,7 +104,7 @@
               />
             </div>
           </div>
-          <div class="detail-row">
+          <div class="v-detail-row">
             <button class="v-button m" id="get-next-point">
               Get Next Point
             </button>
@@ -86,6 +119,6 @@
       src="chemdoodleWeb-9.2.0/ChemDoodleWeb.js"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
