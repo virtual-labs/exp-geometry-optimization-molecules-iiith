@@ -1,1 +1,32 @@
-/* You CSS goes in here */
+.ChemDoodleWebComponent {
+  border: none !important;
+}
+
+.detail-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.detail-data > * {
+  margin: 0.2em;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.expand-container {
+  width: 100%;
+}
+
+.px-2 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.m {
+  margin: 20px;
+}
