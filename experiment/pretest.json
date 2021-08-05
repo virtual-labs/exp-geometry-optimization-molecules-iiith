@@ -1,18 +1,60 @@
 [
-{"question":"This is a Sample Question 1?",
+{"question":"1. A function or potential energy surface can have multiple global minima or maxima.",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"True",
+            "b":"False"
           },
 "correctAnswer":"a"},
-{"question":"This is a Sample Question 2?",
+
+{"question":"2. The gradient of a function points in the direction of minima or descent.",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"True",
+            "b":"False"
           },
-"correctAnswer":"c"} 
+"correctAnswer":"c"}, 
+
+{"question":"3. Picking of initial point x0 and step size chosen in the Steepest Descent method does not affect or matter in the optimization process.",
+"answers":{
+            "a":"True",
+            "b":"False"
+          },
+"correctAnswer":"a"},
+
+{"question":"4. Newton-Raphson method converges quadratically.",
+"answers":{
+            "a":"True",
+            "b":"False"
+          },
+"correctAnswer":"c"}, 
+
+{"question":"5. Newton-Raphson method can converge to (a) minima (b) maxima (c) saddle point. ",
+"answers":{
+            "a":"Minima alone",
+            "b":"Either Maxima or minima but not saddle point",
+            "c":"All of the three: maxima, minima and saddle point"
+          },
+"correctAnswer":"a"},
+
+{"question":"6. Newton-Raphson optimization a one variable function always converges to the solution. ",
+"answers":{
+            "a":"True",
+            "b":"False"
+          },
+"correctAnswer":"c"}, 
+
+{"question":"7. Steepest Descent method always converges to a solution.",
+"answers":{
+            "a":"True",
+            "b":"False"
+          },
+"correctAnswer":"a"},
+
+{"question":"8. The iteration step in the Newton-Raphson's method might fall in infinite loop, in case of oscillating solution.",
+"answers":{
+            "a":"True",
+            "b":"False"
+          },
+"correctAnswer":"c"}, 
+
+
 ]
