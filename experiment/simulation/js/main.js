@@ -1,18 +1,17 @@
+"use strict";
+
 import data from "./data.js";
 
 let element = "butadiene";
 let elementUpdate = true;
 
-let molecule = null;
 let angle = 0;
-let algo = "steepest-descent";
 let deltaX = 0.2;
 
 let myChart = null;
-let xyValues = [];
 
 const initChart = () => {
-  xyValues = Object.keys(data[element]).map((key) => ({
+  const xyValues = Object.keys(data[element]).map((key) => ({
     x: key,
     y: data[element][key]["energy"],
   }));
@@ -77,7 +76,7 @@ const highlightChart = (angle) => {
     myChart.data.datasets[0].pointBackgroundColor = [];
     myChart.data.datasets[0].pointRadius = [];
     for (let i = 0; i < myChart.data.datasets[0].data.length; i++) {
-      if (myChart.data.datasets[0].data[i]["x"] == angle) {
+      if (parseInt(myChart.data.datasets[0].data[i]["x"]) === angle) {
         myChart.data.datasets[0].pointRadius[i] = 7;
         myChart.data.datasets[0].pointBackgroundColor[i] = "red";
       } else {
@@ -94,12 +93,12 @@ if (window.innerWidth < 900) {
   width = window.innerWidth;
   height = 300;
 }
-let movie = new ChemDoodle.MovieCanvas3D("element", width, height);
+const movie = new ChemDoodle.MovieCanvas3D("element", width, height);
 
 const setMolecule = () => {
   movie.clear();
   movie.frames = [];
-  if (data != null) {
+  if (data !== null) {
     movie.addFrame([ChemDoodle.readXYZ(data[element][angle]["geometry"])], []);
     movie.styles.set3DRepresentation("Ball and Stick");
     movie.styles.atoms_displayLabels_3D = true;
@@ -126,10 +125,10 @@ document.querySelectorAll(".element-set .v-chip").forEach((button, ind) => {
       .querySelectorAll(".element-set .v-chip.active")
       .forEach((activeButton) => activeButton.classList.remove("active"));
     button.classList.add("active");
-    if (ind == 0 && element !== "butadiene") {
+    if (ind === 0 && element !== "butadiene") {
       element = "butadiene";
       elementUpdate = true;
-    } else if (ind == 1 && element !== "butane") {
+    } else if (ind === 1 && element !== "butane") {
       element = "butane";
       elementUpdate = true;
     } else if (element !== "ethane") {
@@ -147,7 +146,7 @@ document.querySelectorAll(".element-set .v-chip").forEach((button, ind) => {
 //       .querySelectorAll(".algorithm-set .v-chip.active")
 //       .forEach((activeButton) => activeButton.classList.remove("active"));
 //     button.classList.add("active");
-//     // if (ind == 0) algo = "newton-raphson";
+//     // if (ind === 0) algo = "newton-raphson";
 //     // else algo = "steepest-descent";
 //   });
 // });
@@ -161,8 +160,8 @@ const getClosest = (arr, value) =>
 
 const steepestDescent = () => {
   let x2 = angle + 1;
-  if (angle == 180) x2 = angle - 1;
-  let slope =
+  if (angle === 180) x2 = angle - 1;
+  const slope =
     (data[element][x2]["energy"] - data[element][angle]["energy"]) /
     (x2 - angle);
   let dir = -1;
