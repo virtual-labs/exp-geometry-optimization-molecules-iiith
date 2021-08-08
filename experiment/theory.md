@@ -1,1 +1,19 @@
-### Link your theory in here
+Ab initio quantum chemistry involves a choice of method and a choice of basis set. A number of different procedures are also available, such as single point calculations, geometry optimizations and calculations of frequencies.
+
+Methods, basis sets and procedures play a key role in the calculations.
+
+Methods include the abinitio methods, Hartee-Fock method and the electron correlation methods. The electron correlation methods can be classified as variational methods, perturbation methods and the density functional methods.
+
+### Variational correlation methods
+
+The variational principle states that the expectation value or the average value of an energy for an approximate wave function always lies above or equal to the exact solution of the schrodinger equation for the same Hamiltonian operator. This means that if we have a wave function that contains adjustable parameters and we adjust these parameters to minimise the expectation value of the energy, then we approach the exact result.
+
+The principle post-Hartree-Fock method that uses the variation principle is configuration interaction. Here we take a linear combination of components, each of which represents an excited configuration wave function and mix these with the Hartree-Fock (HF) wave function. Each component has the electrons occupying the various occupied and virtual orbitals of the Hartree-Fock wave function in different ways. It is common to restrict the excited configurations to those which arise from promoting two electrons from the occupied orbitals of the HF wave function to the virtual orbitals (Configuration Interaction with double excitations - CID) or to single and double excitations (Configuration Interaction with single and double excitations - CISD). If we take all possible excitations of the electrons from the HF occupied orbitals to the virtual orbitals, the method is called "Full CI", but this is very time consuming and only possible for very small systems. Other approaches aim! to optimise not only the mixing coefficients of the various configurations, but also the coefficients of the basis functions in the molecular orbitals. The latter are frozen at the HF values in the CI methods described above. This more complex approach is called multi-configuration self-consistent field (MCSCF). It can give quite good results with a modest number of configurations. The CASSCF - Complete Active Space Self-Consistent Field - method is an example of this approach. MCSCF methods, however, are beyond the scope of this module.
+
+### Single point energy calculations
+
+This procedure calculates the energy, wave function and the other requested properties for a single fixed geometry. It is usually done to study a new molecule in order to check the nature of the wave function. It is also frequently carried out after the geometry optimization, but with a larger basis set or a more superior method than those used to optimise the geometry.
+
+### Frequency calculations
+
+The frequency calculations can be carried out for two main reasons. First one is to predict the frequencies and the IR and Raman intensities. Frequencies which are calculated are harmonic frequencies as they are obtained by assuming the potential energy surface to be harmonic. After running an optimization calculation, if all the calculated frequencies are real and positive then that contributes to the local or global minimum of the molecule taken. If we have a stationary point other than the minimum then we don't get all positive values but there would be negative numbers which are often called as "imaginary frequencies". A transition state for any molecule would have only one imaginary frequency. If the symmetry of the molecule is restrained it gives more than one imaginary frequency during optimization. For a molecule of n atoms, the number of normal modes is (3n-6) if the molecule taken is nonlinear and it is (3n-5) if the molecule is linear.

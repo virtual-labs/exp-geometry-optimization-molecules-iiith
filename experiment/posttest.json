@@ -1,18 +1,47 @@
-[
-{"question":"This is a Sample Question 1?",
-"answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
-          },
-"correctAnswer":"a"},
-{"question":"This is a Sample Question 2?",
-"answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
-          },
-"correctAnswer":"c"} 
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which of the following will have the highest time period of oscillation?",
+      "answers": {
+        "a": "C-H",
+        "b": "C-C",
+        "c": "C-O",
+        "d": "C-Cl"
+      },
+      "explanations": {
+        "d": "Time period depends upon the reduced mass of the atoms involved in the vibrational mode. Higher the reduced mass, higher is the time period. C-Cl has the highest reduced mass among all. "
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following will have the slowest time period of oscillation?",
+      "answers": {
+        "a": "C-C",
+        "b": "C=C",
+        "c": "C≡C",
+        "d": "All will have the same time period"
+      },
+      "explanations": {
+        "c": "Time period of an oscillation depends on the force constant of the bond involved. Force constants is higher for bonds having multiple bonds than those having single bonds. "
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Choose the correct statement from the following",
+      "answers": {
+        "a": "It is not possible to reach a higher energy stationary state using geometry optimization",
+        "b": "It is possible to reach a higher energy stationary state using geometry optimization",
+        "c": "Geometry optimization can take any structure to both high and low energy stationary states",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "b": "Geometry optimization can take a structure to high and low energy stationary state depending on the requirement of the calculations, provided the structure is closer to expected stationary state."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}

@@ -1,60 +1,73 @@
-[
-{"question":"1. A function or potential energy surface can have multiple global minima or maxima.",
-"answers":{
-            "a":"True",
-            "b":"False"
-          },
-"correctAnswer":"a"},
-
-{"question":"2. The gradient of a function points in the direction of minima or descent.",
-"answers":{
-            "a":"True",
-            "b":"False"
-          },
-"correctAnswer":"c"}, 
-
-{"question":"3. Picking of initial point x0 and step size chosen in the Steepest Descent method does not affect or matter in the optimization process.",
-"answers":{
-            "a":"True",
-            "b":"False"
-          },
-"correctAnswer":"a"},
-
-{"question":"4. Newton-Raphson method converges quadratically.",
-"answers":{
-            "a":"True",
-            "b":"False"
-          },
-"correctAnswer":"c"}, 
-
-{"question":"5. Newton-Raphson method can converge to (a) minima (b) maxima (c) saddle point. ",
-"answers":{
-            "a":"Minima alone",
-            "b":"Either Maxima or minima but not saddle point",
-            "c":"All of the three: maxima, minima and saddle point"
-          },
-"correctAnswer":"a"},
-
-{"question":"6. Newton-Raphson optimization a one variable function always converges to the solution. ",
-"answers":{
-            "a":"True",
-            "b":"False"
-          },
-"correctAnswer":"c"}, 
-
-{"question":"7. Steepest Descent method always converges to a solution.",
-"answers":{
-            "a":"True",
-            "b":"False"
-          },
-"correctAnswer":"a"},
-
-{"question":"8. The iteration step in the Newton-Raphson's method might fall in infinite loop, in case of oscillating solution.",
-"answers":{
-            "a":"True",
-            "b":"False"
-          },
-"correctAnswer":"c"}, 
-
-
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is time period of an oscillator?",
+      "answers": {
+        "a": "Time taken to complete one half of an oscillation",
+        "b": "Time taken to complete one complete oscillation",
+        "c": "Time taken to reach from one end to other end of oscillation",
+        "d": "Time taken to complete one third of an oscillation"
+      },
+      "explanations": {
+        "b": "Time period of an oscillator is the time taken to complete one complete oscillation which means the oscillator reaches back to its original position after one time period."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Time period of the oscillator is depends on:",
+      "answers": {
+        "a": "mass",
+        "b": "initial conditions",
+        "c": "displacement",
+        "d": "size"
+      },
+      "explanations": {
+        "a": "Time period of an oscillation is given as <img src='./images/pretest/q2/exp.png'> where m is mass and k is force constant. "
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How long will a geometry optimization continue to run?",
+      "answers": {
+        "a": "Till it reaches minimum",
+        "b": "Till it achieves a threshold predicted change in energy",
+        "c": "Till it reaches a maximum number of steps before the threshold predicted change in energy",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "d": "The geometry optimization calculation will continue to run till it reaches the stationary state of the molecule, this is confirmed by calculating the predicted change in the energy between current and next step. Often the stationary point is not reached in the default number of steps due to a much diverse potential energy surface and the geometry optimization stops after it runs for the maximum number of steps."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Which of the following is true for an optimized minimum energy structure?",
+      "answers": {
+        "a": "It will have all positive valued frequencies of normal modes",
+        "b": "It will be the global minima on the potential energy surface",
+        "c": "There can be small negative valued frequencies too",
+        "d": "Re-optimizing an optimized geometry will produce a new geometry"
+      },
+      "explanations": {
+        "a": "A minimum energy stationary point on the potential energy surface is characterised by its frequencies of its vibrational modes. A minimum will have all positive valued frequencies."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Geometry optimization of an excited stationary state will take it to any of the minimum energy stationary states.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "Geometry optimization by default takes a structure to a minimum stationary state unless otherwise mentioned."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    }
+  ]
+}
