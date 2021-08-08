@@ -1,10 +1,8 @@
- Step by step details of the experiment:
-
-1. From the main page choose one of the optimization methods.
-2. Now select one of the displayed molecules for geometric optimization.
-3. In the first stage of optimization, the algorithm is ''constructed'' by clicking on the appropriate buttons at the bottom left of the screen.
-4. In the second stage, the values for various parameters are set:
-   a. Choose the position by clicking the "Choose X" and then pointing and clicking on the graph where the point is to be located.
-   b. Variables like "Step Size" can be changed within the preset range of values by repeatedly clicking its button.
-   c. By clicking the ''Repeat'' button, one iteration is performed. The new position and the structure that corresponds to it are displayed.
-5. Please note the value of the minima that you have obtained.
+1. Select an element from the list in the simulation.
+2. Dihedral angle vs Energy plot of the selected element will get displayed.
+3. Select any point on this graph.
+4. Now select a large step size from the slider.
+5. Click on Get Next Point to get next lower point using steepest descent method.
+6. For the current selected angle, the orientation of the molecule will also get displayed.
+7. Use mouse to interact with molecule, by rotating, and zooming around it.
+8. Perform the above memtioned steps repeatedly, by gradually reducing the step size, until minima is reached.
