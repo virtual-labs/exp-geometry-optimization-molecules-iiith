@@ -1,4 +1,4 @@
-Different kinds of calculations require different kinds of input. But some items are to be specified in all the cases. The two most popular computer programs for carrying out ab initio quantum chemical calculations is the "Gaussian" and "Gamess" series.
+Different kinds of calculations require different kinds of input. But some items are to be specified in all the cases. The two most popular computer programs for carrying out ab initio quantum chemical calculations are the "Gaussian" and "Gamess" series.
 
 To study a molecule using these software we need to specify the molecule's Cartesian coordinates or the z-matrix of the molecule or the redundant internal coordinates of the molecule.
 
