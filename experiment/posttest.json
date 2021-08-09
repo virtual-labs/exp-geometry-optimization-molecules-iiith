@@ -24,7 +24,7 @@
         "d": "All will have the same time period"
       },
       "explanations": {
-        "c": "Time period of an oscillation depends on the force constant of the bond involved. Force constants is higher for bonds having multiple bonds than those having single bonds. "
+        "c": "Time period of an oscillation depends on the force constant of the bond involved. Force constant is higher for bonds having multiple bonds than those having single bonds. "
       },
       "correctAnswer": "c",
       "difficulty": "intermediate"
