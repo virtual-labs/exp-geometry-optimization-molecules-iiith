@@ -16,7 +16,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Time period of the oscillator is depends on:",
+      "question": "Time period of the oscillator depends upon:",
       "answers": {
         "a": "mass",
         "b": "initial conditions",
@@ -38,7 +38,7 @@
         "d": "All of the above"
       },
       "explanations": {
-        "d": "The geometry optimization calculation will continue to run till it reaches the stationary state of the molecule, this is confirmed by calculating the predicted change in the energy between current and next step. Often the stationary point is not reached in the default number of steps due to a much diverse potential energy surface and the geometry optimization stops after it runs for the maximum number of steps."
+        "d": "The geometry optimization calculation will continue to run till it reaches the stationary state of the molecule. This can be confirmed by calculating the predicted change in the energy between the current and the next step. Often the stationary point is not reached in the default number of steps due to a much diverse potential energy surface, and the geometry optimization stops after it runs for the maximum number of steps."
       },
       "correctAnswer": "d",
       "difficulty": "advanced"
@@ -52,7 +52,7 @@
         "d": "Re-optimizing an optimized geometry will produce a new geometry"
       },
       "explanations": {
-        "a": "A minimum energy stationary point on the potential energy surface is characterised by its frequencies of its vibrational modes. A minimum will have all positive valued frequencies."
+        "a": "A minimum energy stationary point on the potential energy surface is characterised by the frequencies of its vibrational modes. A minimum will have all the positive valued frequencies."
       },
       "correctAnswer": "a",
       "difficulty": "advanced"
@@ -64,7 +64,7 @@
         "b": "False"
       },
       "explanations": {
-        "a": "Geometry optimization by default takes a structure to a minimum stationary state unless otherwise mentioned."
+        "a": "Geometry optimization, by default, takes a structure to a minimum stationary state unless mentioned otherwise."
       },
       "correctAnswer": "a",
       "difficulty": "intermediate"
