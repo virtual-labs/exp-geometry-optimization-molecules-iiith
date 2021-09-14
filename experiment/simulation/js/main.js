@@ -90,7 +90,6 @@ const initChart = () => {
 
         if (points.length) {
           setInstruction(3);
-
           const firstPoint = points[0];
           var value =
             myChart.data.datasets[firstPoint._datasetIndex].data[
@@ -155,7 +154,6 @@ const triggerUpdate = () => {
 document.querySelectorAll(".element-set .v-chip").forEach((button, ind) => {
   button.addEventListener("click", () => {
     setMultipleInstructions([1, 2]);
-
     document
       .querySelectorAll(".element-set .v-chip.active")
       .forEach((activeButton) => activeButton.classList.remove("active"));
