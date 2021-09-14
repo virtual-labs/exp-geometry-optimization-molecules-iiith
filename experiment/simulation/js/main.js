@@ -1,6 +1,37 @@
 "use strict";
 
-import data from "./data.js";
+import data, { instructions } from "./data.js";
+
+let currentInstructionIndex = -1;
+let sleepTime = 3500;
+
+const setInstruction = (index) => {
+  if (index < instructions.length && currentInstructionIndex < index) {
+    currentInstructionIndex = index;
+    document.getElementById("instructions").innerHTML =
+      instructions[currentInstructionIndex].message;
+
+    instructions[currentInstructionIndex].elementId.forEach((id, ind) => {
+      if (ind === 0)
+        document.getElementById(id).scrollIntoView({
+          behavior: "smooth",
+        });
+      document.getElementById(id).classList.add("highlight");
+    });
+    sleep(sleepTime - 600).then(() =>
+      instructions[currentInstructionIndex].elementId.forEach((id) =>
+        document.getElementById(id).classList.remove("highlight")
+      )
+    );
+  }
+};
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const setMultipleInstructions = (indexes) =>
+  indexes.forEach((val, ind) =>
+    sleep(sleepTime * ind).then(() => setInstruction(val))
+  );
 
 let element = "butadiene";
 let elementUpdate = true;
@@ -58,6 +89,7 @@ const initChart = () => {
         );
 
         if (points.length) {
+          setInstruction(3);
           const firstPoint = points[0];
           var value =
             myChart.data.datasets[firstPoint._datasetIndex].data[
@@ -88,7 +120,7 @@ const highlightChart = (angle) => {
 };
 
 let width = 600,
-  height = 400;
+  height = 300;
 if (window.innerWidth < 900) {
   width = window.innerWidth;
   height = 300;
@@ -121,6 +153,7 @@ const triggerUpdate = () => {
 
 document.querySelectorAll(".element-set .v-chip").forEach((button, ind) => {
   button.addEventListener("click", () => {
+    setMultipleInstructions([1, 2]);
     document
       .querySelectorAll(".element-set .v-chip.active")
       .forEach((activeButton) => activeButton.classList.remove("active"));
@@ -139,19 +172,8 @@ document.querySelectorAll(".element-set .v-chip").forEach((button, ind) => {
   });
 });
 
-// for future development
-// document.querySelectorAll(".algorithm-set .v-chip").forEach((button, ind) => {
-//   button.addEventListener("click", () => {
-//     document
-//       .querySelectorAll(".algorithm-set .v-chip.active")
-//       .forEach((activeButton) => activeButton.classList.remove("active"));
-//     button.classList.add("active");
-//     // if (ind === 0) algo = "newton-raphson";
-//     // else algo = "steepest-descent";
-//   });
-// });
-
 triggerUpdate();
+setInstruction(0);
 
 const getClosest = (arr, value) =>
   arr.reduce((prev, curr) =>
@@ -186,6 +208,11 @@ deltaXSlider.addEventListener("input", () => {
   deltaXVal.innerHTML = deltaX;
 });
 
+deltaXSlider.addEventListener("mouseup", () => setInstruction(4));
+
+deltaXSlider.addEventListener("touchend", () => setInstruction(4));
+
 document.getElementById("get-next-point").addEventListener("click", () => {
+  setMultipleInstructions([5, 6, 7]);
   steepestDescent();
 });

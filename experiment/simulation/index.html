@@ -10,52 +10,28 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="v-details-container v-margin-bottom">
-      <div class="v-detail-title">
-        <div>Instructions</div>
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Select an element from the list.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Dihedral angle vs Energy plot of the selected element will get
-        displayed.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Select any point on this graph.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Now select a large step size from the slider.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Click on Get Next Point to get next lower point using steepest descent
-        method.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        For the current selected angle, the orientation of the molecule will
-        also get displayed.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Use mouse/touch to interact with molecule, by rotating, and zooming
-        around it.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Perform the above memtioned steps repeatedly, by gradually reducing the
-        step size, until minima is reached.
-      </div>
+    <div class="v-details-container v-margin-bottom v-floating-details">
+      <div class="v-detail-title">Instructions</div>
+      <div class="v-detail-row left-on-mobile" id="instructions"></div>
     </div>
+
     <div class="columns">
-      <div class="column center-content v-flex-column">
+      <div class="column center-content">
         <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
+      </div>
+      <div class="column center-content">
         <canvas
           id="element"
           style="width: 100%; max-width: 700px; height: 100%"
         ></canvas>
       </div>
-      <div class="column v-vertical">
-        <div class="v-details-container">
+    </div>
+
+    <div class="columns control-panel">
+      <div class="column">
+        <div class="v-details-container" id="molecule-container">
           <div class="v-detail-title">
-            <div>Choose an element</div>
+            <div>Molecules</div>
           </div>
           <div class="v-detail-row element-set">
             <div class="v-detail-block v-chip active">Butadiene</div>
@@ -63,29 +39,10 @@
             <div class="v-detail-block v-chip">Ethane</div>
           </div>
         </div>
+      </div>
+      <div class="column">
         <div class="v-details-container">
-          <div class="v-detail-title">
-            <div>Select any point from the graph</div>
-          </div>
-          <div class="v-detail-row">
-            <div class="detail-data">
-              <div>x = <span id="x-val">N/A</span></div>
-            </div>
-          </div>
-          <div class="v-detail-row">
-            <div class="detail-data">
-              <div>f(x) = <span id="y-val">N/A</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="v-details-container">
-          <div class="v-detail-title">Configure Algorithm</div>
-          <div class="v-detail-row algorithm-set">
-            <div class="v-detail-block v-chip active">
-              Steepest Descent Method
-            </div>
-          </div>
+          <div class="v-detail-title">Algorithm Configuration</div>
           <div class="v-detail-row expand-container">
             <div class="detail-data px-2">
               <div>Step size is <span id="delta-x">0</span></div>
@@ -104,6 +61,23 @@
             <button class="v-button m" id="get-next-point">
               Get Next Point
             </button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="v-details-container">
+          <div class="v-detail-title">
+            <div>Observations</div>
+          </div>
+          <div class="v-detail-row">
+            <div class="detail-data">
+              <div>x = <span id="x-val">N/A</span></div>
+            </div>
+          </div>
+          <div class="v-detail-row">
+            <div class="detail-data">
+              <div>f(x) = <span id="y-val">N/A</span></div>
+            </div>
           </div>
         </div>
       </div>
