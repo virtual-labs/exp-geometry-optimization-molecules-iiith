@@ -5423,4 +5423,42 @@ const data = {
     },
   },
 };
+
+export const instructions = [
+  {
+    message: "Select a molecule",
+    elementId: ["molecule-container"],
+  },
+  {
+    message: "Observe the dihedral angle vs energy plot of this molecule",
+    elementId: ["myChart"],
+  },
+  {
+    message: "Select any coordinate on this graph",
+    elementId: ["myChart"],
+  },
+  {
+    message: "Choose a large step size from the slider",
+    elementId: ["delta-x-slider"],
+  },
+  {
+    message:
+      "Click on Get Next Point to get next lower point using steepest descent method",
+    elementId: ["get-next-point"],
+  },
+  {
+    message: "Observe the orientation of the molecule for the current angle",
+    elementId: ["element"],
+  },
+  {
+    message: "Interact with molecule by rotating and zooming around it",
+    elementId: ["element"],
+  },
+  {
+    message:
+      "Repeat this process by gradually reducing the step size, until minima is reached",
+    elementId: ["delta-x-slider", "get-next-point"],
+  },
+];
+
 export default data;
