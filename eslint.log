@@ -1,0 +1,9 @@
+
+/home/runner/work/exp-geometry-optimization-molecules-iiith/exp-geometry-optimization-molecules-iiith/experiment/simulation/js/main.js
+   50:17  warning  'Chart' is not defined                           no-undef
+  128:19  warning  'ChemDoodle' is not defined                      no-undef
+  134:21  warning  'ChemDoodle' is not defined                      no-undef
+  178:7   warning  'getClosest' is assigned a value but never used  no-unused-vars
+
+✖ 4 problems (0 errors, 4 warnings)
+
